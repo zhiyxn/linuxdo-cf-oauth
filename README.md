@@ -1,6 +1,6 @@
 # linuxdo-cf-oauth
 
-一个部署在 Cloudflare Workers 上的 OAuth 代理，用于转发 linux.do 的 `/oauth/token` 请求，并提供 `/api/user` 的透传访问。
+一个部署在 Cloudflare Workers 上的 OAuth 代理，用于转发 linux.do 的 认证与获取用户信息请求。
 
 ## 提醒
 
