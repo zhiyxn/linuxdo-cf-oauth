@@ -2,6 +2,14 @@
 
 一个部署在 Cloudflare Workers 上的 OAuth 代理，用于转发 linux.do 的 `/oauth/token` 请求，并提供 `/api/user` 的透传访问。
 
+## 提醒
+
+在调用 `/oauth/token` 前，需要先到 https://connect.linux.do/ 申请接入并获取 Client ID 与 Client Secret。 然后通过浏览器跳转以下地址获取 `code` 参数。
+
+```
+https://connect.linux.do/oauth2/authorize?client_id=clientId&response_type=code&scope=all&redirect_url=http://localhost:5173/#
+```
+
 ## 功能
 
 - 代理 `POST /oauth/token` 到 `https://connect.linux.do/oauth2/token`
