@@ -57,7 +57,7 @@ curl "https://<your-worker-domain>/api/user" \
 
 ## 重要知识
 
-- 仅支持 `application/x-www-form-urlencoded`，否则返回 415。
+- `/oauth/token` 仅支持 `application/x-www-form-urlencoded`，否则返回 415。
 - 缺少 `client_id` 或 `client_secret` 会返回 401。
 - `ALLOWED_ORIGINS` 为空时会按请求来源回显 CORS。
 - 目前仅处理 `POST /oauth/token` 与 `GET /api/user`。
